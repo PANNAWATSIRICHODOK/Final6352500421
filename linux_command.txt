@@ -1,0 +1,7 @@
+mkdir FinalExamRos
+cd FinalExamRos
+cat > ROBOT_CLASS.txt
+git remote add origin "https://github.com/robot-class/final.git"
+git remote -v
+git add .
+git commit -m ""
