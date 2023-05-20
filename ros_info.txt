@@ -1,0 +1,13 @@
+ROS Topic โหนดสื่อสารกันโดยการเผยแพร่ข้อความไปยังหัวข้อแลtสมาชิกหัวข้อ
+ROS Service ทำหน้าส่ง Message แบบ ไม่เน้นความต่อเนื่อง มี Request มี Response
+Topic คือ ชื่อของ stream of messages ที่มีการกำหนดชนิดไว้
+Message คือ ข้อความที่ Node ใช้คุยกัน
+
+ความแตกต่างในเชิงการใช้งานของ ROSTopic กับ ROS Service
+
+ROSTopic ใช้สำหรับการสื่อสารแบบแพร่กระจาย (publish/subscribe) ระหว่างโหนดที่ส่งข้อมูล (publishing node) และโหนดที่รับข้อมูล (subscribing node) ในลักษณะ "one-to-many".
+ส่งข้อมูลแบบไม่ระบุเวลา (asynchronous) และไม่ต้องมีการตอบสนองเพื่อรับข้อมูล.
+ROSService:
+
+ROSService ใช้สำหรับการสื่อสารแบบแบ่งปันบริการ (request/response) ระหว่างโหนดผู้ให้บริการ (service provider) และโหนดผู้ใช้บริการ (service client).
+การสื่อสารเป็นแบบส่งข้อความและรับข้อความแบบระบุเวลา (synchronous) และต้องมีการรับข้อมูลตอบกลับจากผู้ให้บริการ.
